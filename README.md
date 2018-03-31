@@ -25,31 +25,32 @@ $ npm install jec-jars-mock --save
 All JEC JARS-MOCK components have to be imported with the ES6 syntax:
 
 ```javascript
-import { TestSuite, Test, BeforeAll, AfterAll } from "jec-juta";
+import { TestStats } from "jec-juta";
+import { Tiger, TigerFactory } from "jec-tiger";
 import { JarsMock } from "jec-jars-mock";
 
-@TestSuite({
-  description: "Tests the \"HelloWorld\" class methods."
-})
-export class HelloWorldTest {
-  
-  @BeforeAll()
-  public initTest():void {
-    JarsMock.getInstance().createContext();
+const factory:TigerFactory = new TigerFactory();
+const tiger:Tiger = factory.create();
+tiger.beforeProcess(()=> {
+  JarsMock.getInstance().createContext();
+});
+tiger.afterProcess(()=> {
+  JarsMock.getInstance().deleteContext();
+});
+tiger.process((stats:TestStats)=> {
+  if(stats.error) console.error(stats.error);
+  else {
+    console.log(
+`Test stats:
+- test lookup process duration: ${stats.time}
+- number of test suites: ${stats.numTestSuites}
+- number of disabled test suites: ${stats.numDisabledTestSuites}
+- number of synchronous test cases: ${stats.numTests}
+- number of asynchronous test cases: ${stats.numAsyncTests}
+- number of disabled test cases: ${stats.numDisabledTests}`
+    );
   }
-
-  @AfterAll()
-  public initTest():void {
-    JarsMock.getInstance().disposeContext();
-  }
-
-  @Test(
-    description: "should say Hello to the world",
-  )
-  public sayHelloTest():void {
-    // Test here...
-  }
-}
+});
 ```
 
 For a complete list of available components, please refer to the [API Reference](#api-reference) documentation.
