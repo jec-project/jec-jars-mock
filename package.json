@@ -29,10 +29,11 @@
   },
   "homepage": "https://github.com/pechemann/jec-jars-mock#readme",
   "dependencies": {
-    "jec-commons": "^1.1.8"
+    "jec-commons": "^1.1.8",
+    "jec-jars": "^1.0.8"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.13",
     "chai": "^3.5.0",
     "chai-spies": "^0.7.1",
     "grunt": "^1.0.1",
@@ -41,7 +42,9 @@
     "grunt-mocha-test": "^0.13.2",
     "grunt-ts": "^6.0.0-beta.17",
     "grunt-typedoc": "^0.2.4",
-    "mocha": "^3.3.0",
+    "jec-juta": "^1.1.7",
+    "jec-tiger": "^1.1.8",
+    "mocha": "^3.4.2",
     "typedoc": "^0.8.0",
     "typescript": "^2.6.2"
   }

@@ -7,4 +7,7 @@
 
 declare module "jec-jars-mock" {
 
+import { HttpMethodParams, RoutePathParams, RootPathVersion } from "jec-jars";
+import { Singleton, Decorator, AbstractDecoratorConnector } from "jec-commons";
+
 /*PLACEHOLDER*/}
