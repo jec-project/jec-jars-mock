@@ -34,9 +34,6 @@ const tiger:Tiger = factory.create();
 tiger.beforeProcess(()=> {
   JarsMock.getInstance().createContext();
 });
-tiger.afterProcess(()=> {
-  JarsMock.getInstance().deleteContext();
-});
 tiger.process((stats:TestStats)=> {
   if(stats.error) console.error(stats.error);
   else {
