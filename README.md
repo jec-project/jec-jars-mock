@@ -1,6 +1,6 @@
 # JEC JARS-MOCK Project
 
-JEC JARS is a [JavaScript Entreprise Container][jec-url] project focused on the implementation of RESTful web services in JEC applications.
+JEC JARS is a [JavaScript Entreprise Container][jec-url] project provides mocking functionalities for testing services built over the JavaScript API for Restful Services (JARS).
 
 [![][jec-logo]][jec-url]
 
