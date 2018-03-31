@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jec_commons_1 = require("jec-commons");
-const JarsMockContextManager_1 = require("./context/JarsMockContextManager");
+const JarsMockContextManager_1 = require("./jcad/JarsMockContextManager");
 class JarsMock {
     constructor() {
         this._id = null;
@@ -26,8 +26,8 @@ class JarsMock {
     createContext() {
         this._contextManager.createContext();
     }
-    disposeContext() {
-        this._contextManager.disposeContext();
+    deleteContext() {
+        this._contextManager.deleteContext();
     }
     getId() {
         return this._id;

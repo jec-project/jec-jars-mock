@@ -16,7 +16,7 @@
 
 import {Singleton, SingletonError, GlobalGuidGenerator,
         GuidGenerator} from "jec-commons";
-import { JarsMockContextManager } from "./context/JarsMockContextManager";
+import { JarsMockContextManager } from "./jcad/JarsMockContextManager";
 
 /**
  * A singleton that allows to manage contexts for Unit Testing of JARS
@@ -107,8 +107,8 @@ export class JarsMock implements Singleton {
   /**
    * Disposes an existing JARS MOCK context.
    */
-  public disposeContext():void {
-    this._contextManager.disposeContext();
+  public deleteContext():void {
+    this._contextManager.deleteContext();
   }
   
   /**
