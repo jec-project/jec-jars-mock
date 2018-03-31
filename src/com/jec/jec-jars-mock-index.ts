@@ -13,4 +13,4 @@
  */
 
 //--> com/jec/jarsmock
-//export {JarsMock} from "./jars/JarsMock";
+export {JarsMock} from "./jarsmock/JarsMock";

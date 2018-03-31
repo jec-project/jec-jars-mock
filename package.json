@@ -1,7 +1,7 @@
 {
   "name": "jec-jars-mock",
   "version": "1.0.8",
-  "description": "JEC JARS-MOCK - Provides support for annotations that make it easy for developers to build RESTful web services.",
+  "description": "JEC JARS-MOCK - Mocking library for testing services built over the JavaScript API for Restful Services (JARS)..",
   "main": "dist/com/jec/jec-jars-mock-index",
   "types": "types/jec-jars-mock.d.ts",
   "scripts": {
