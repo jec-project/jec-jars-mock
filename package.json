@@ -1,6 +1,6 @@
 {
   "name": "jec-jars-mock",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "JEC JARS-MOCK - Mocking library for testing services built over the JavaScript API for Restful Services (JARS)..",
   "main": "dist/com/jec/jec-jars-mock-index",
   "types": "types/jec-jars-mock.d.ts",
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/jec-project/jec-jars-mock#readme",
   "dependencies": {
     "jec-commons": "^1.1.8",
-    "jec-jars": "^1.0.8"
+    "jec-jars": "^1.0.9"
   },
   "devDependencies": {
     "@types/node": "^8.0.13",
